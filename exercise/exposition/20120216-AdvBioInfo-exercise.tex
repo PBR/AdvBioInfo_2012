@@ -1,0 +1,92 @@
+% This template from http://www.vel.co.nz
+
+% LaTeX resume using res.cls
+\documentclass[margin]{res}
+\setlength{\textwidth}{5.1in} % set width of text portion
+
+\usepackage{hyperref}
+
+
+\hypersetup{
+    colorlinks=true,       % false: boxed links; true: colored links
+    urlcolor=red           % color of external links
+}
+
+
+\begin{document}
+
+\moveleft.5\hoffset\centerline{
+    \large\bf BIF-30806 - 2012 - Introduction to data integration
+}
+
+\moveleft.5\hoffset\centerline{
+    \large\bf - \textit{Exercise} -
+}
+
+\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+
+\begin{resume}
+ 
+\section{OBJECTIVE}  For the protein with the ID Q42435 retrieve the name,
+                short name and pathways from the uniprot website.
+ 
+
+\section{HTML} Retrieve and extract the asked information from the HTML
+            available at : \\
+            \url{http://www.uniprot.org/uniprot/Q42435}
+ 
+ 
+\section{XML} XML is a well-used format. If you start using web-services
+            chances are that you will have to face it one day or another.
+            Here we are going to parse the XML without calling a web-service
+            as it would fall beyond the scope of this exercise.
+            
+            Retrieve and extract the asked information from the XML 
+            available at : \\
+            \url{http://www.uniprot.org/uniprot/Q42435.xml}
+ 
+\section{RDF} RDF is one of the format which is used by the semantic web
+            to represent triples.
+            
+            Uniprot provides protein information in RDF.
+            
+            Retrieve and extract the asked information from the RDF
+            available at : \\
+            \url{http://www.uniprot.org/uniprot/Q42435.xml}
+
+\section{Extras-information} This exercise can be made using the programming
+                languages perl or python as you prefer, just remember that
+                the goal of this course is also to learn perl.
+
+                If you do not know where to start, you can find help starting
+                at: \\
+                % We need to put them in a different place - Will they have git?
+                \url{http://www.bioinformatics.nl/courses/BIF-30806/} \\
+                For each format these scripts retrieve the name of the protein,
+                you will have to adjust them for the short name and the pathways.
+                
+                Some more hints:
+                \begin{itemize}
+                    \item To parse the HTML, you will probably want to use regular expression
+                    \item To parse the XML or the RDF there are some modules available to help you (see below).
+                \end{itemize}
+                If you use perl:
+                \begin{itemize}
+                    \item To parse the xml, you will want to look at the XML::Simple module \\
+                    See: \url{http://search.cpan.org/dist/XML-Simple/lib/XML/Simple.pm}
+                    \item To parse the rdf, you will want to look at the RDF::Trine module \\
+                    See: \url{http://search.cpan.org/dist/RDF-Trine/lib/RDF/Trine.pm}
+                \end{itemize}
+                
+                If you use python:
+                \begin{itemize}
+                    \item To parse the xml, you will want to look at the python-lxml module \\
+                    See: \url{http://lxml.de} \\
+                    Note: In the example file there is a small hack which might help you!
+                    \item To parse the rdf, you will want to look at the python-rdflib module \\
+                    See: \url{http://code.google.com/p/rdflib/}
+                \end{itemize}
+                
+
+\end{resume}
+\end{document}

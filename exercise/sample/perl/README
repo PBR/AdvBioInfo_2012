@@ -1,0 +1,13 @@
+This folder contains three scripts providing a possible answer to the
+exercise.
+
+Dependencies:
+ - parsing_rdf
+   - RDF::Trine
+ - parsing_rdf2
+   - RDF::Query
+ - parsing_xml
+   - XML::Simple
+ - parsing_html
+   - HTML::Parse
+   - HTML::FormatText
