@@ -1,0 +1,12 @@
+This folder contains three scripts providing a possible answer to the
+exercise.
+
+Dependencies:
+ - parsing_rdf
+   - python-rdflib
+   
+ - parsing_xml
+   - python-requests
+   - python-lxml
+ - parsing_html
+   - python-requests
